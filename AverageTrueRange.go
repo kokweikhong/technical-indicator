@@ -12,7 +12,7 @@ import (
 // the entire range of an asset price for that period.
 func AverageTrueRange(ohlc []*OHLC, instrument string, period int) []*OHLC {
 	var TR, ATR string = "TR", "ATR"
-	var decimal float64 = 10000
+	var decimal float64 = 100000
 	// Check the instrument whether is contains "JPY", JPY decimal places is different with other.
 	if strings.Contains(strings.ToLower(instrument), "jpy") {
 		decimal = 1000
