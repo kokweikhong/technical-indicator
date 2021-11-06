@@ -27,7 +27,6 @@ func SimpleMovingAverage(ohlc []*OHLC, instrument string, periods ...int) []*OHL
 			}
 			v.Indicator[sma] = sum / float64(periods[i])
 			v.Indicator[sma] = math.Round(v.Indicator[sma]*decimal) / decimal
-			fmt.Println(v.Time, v.Close, v.Indicator)
 		}
 	}
 	return ohlc
